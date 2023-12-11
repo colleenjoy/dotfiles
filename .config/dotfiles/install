@@ -2,13 +2,19 @@
 
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$HOME/.zprofile"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+if test ! $(which omz); then
+    /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 xcode-select --install
 
 brew update
 brew tap homebrew/bundle
-brew bundle --file $HOME/.config/dotfiles/Brewfile
+brew bundle --file "$HOME"/.config/dotfiles/Brewfile
 
 # Install Google Cloud SDK
 

@@ -21,6 +21,8 @@ brew 'mysql'
 brew 'postgresql@14'
 brew 'pyenv-virtualenv'
 brew 'sbt'
+brew 'volta'
+brew 'nvm'
 
 cask '1password'
 cask 'docker'
