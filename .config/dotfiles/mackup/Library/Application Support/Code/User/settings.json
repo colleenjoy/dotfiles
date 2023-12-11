@@ -1,0 +1,29 @@
+{
+  "workbench.colorTheme": "Night Owl",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.maxComputationTime": 0,
+  "githubPullRequests.pullBranch": "never",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enabled": true,
+  "git.path": "/usr/local/bin/git",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "files.autoSave": "afterDelay",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "window.zoomLevel": 2,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  }
+}

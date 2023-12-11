@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+if test ! $(which brew); then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+xcode-select --install
+
+brew update
+brew tap homebrew/bundle
+brew bundle --file $HOME/.config/dotfiles/Brewfile
+
+# Install Google Cloud SDK
+
+if [ ! -d ~/google-cloud-sdk ] then
+
+  if [[ $(uname -p) == 'arm' ]]; then
+    wget -O google-cloud-cli.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-393.0.0-darwin-arm.tar.gz
+  else
+    wget -O google-cloud-cli.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-393.0.0-darwin-x86_64.tar.gz
+  fi
+
+  mkdir ~/google-cloud-sdk
+  tar -xvf google-cloud-cli.tar.gz -C ~/google-cloud-sdk
+  ~/google-cloud-sdk/bin/gcloud init
+
+fi

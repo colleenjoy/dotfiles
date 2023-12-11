@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+git --git-dir=$HOME/.dotfiles.git/ --work-tree $HOME checkout main
+
+$HOME/.config/dotfiles/macos
+
+$HOME/.config/dotfiles/install
+
+mackup restore

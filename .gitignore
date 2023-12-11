@@ -1,0 +1,6 @@
+/*
+!/.config
+/.config/*
+!/.config/dotfiles
+/.config/dotfiles/*
+!/.config/dotfiles/mackup
